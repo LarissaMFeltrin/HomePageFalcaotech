@@ -1,0 +1,5 @@
+# Imagens brutas recebidas do cliente (só as otimizadas em public/img são publicadas)
+/*.jpeg
+
+# Anotações internas sobre o cliente
+/NOTAS.md
