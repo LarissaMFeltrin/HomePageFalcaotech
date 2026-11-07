@@ -442,16 +442,25 @@ h3 { font-family: var(--fonte-titulo); font-weight: 700; line-height: 1.15; }
 .historia__frentes { display: flex; flex-direction: column; gap: 10px; }
 .historia__frentes strong { color: var(--branco); font-weight: 600; }
 
-/* Depoimentos */
-.grade-depoimentos {
+/* Avaliações do Google */
+.grade-avaliacoes {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 32px;
+  gap: 16px;
 }
-.depoimento { display: flex; flex-direction: column; gap: 12px; }
-.depoimento blockquote { font-size: 20px; line-height: 1.4; }
-.depoimento figcaption { font-family: var(--fonte-tecnica); font-size: 13px; color: var(--cinza); }
+.avaliacao {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  background: var(--cartao);
+  border-radius: 12px;
+}
+.avaliacao__estrelas { color: #FBBC04; font-size: 20px; letter-spacing: 2px; }
+.avaliacao blockquote { flex: 1; font-size: 18px; line-height: 1.5; }
+.avaliacao figcaption { font-family: var(--fonte-titulo); font-weight: 700; color: var(--branco); }
+.avaliacao figcaption span { font-family: var(--fonte-texto); font-weight: 400; font-size: 14px; color: var(--cinza); }
 
 /* Contato */
 .contato { align-items: stretch; }
@@ -563,7 +572,7 @@ h3 { font-family: var(--fonte-titulo); font-weight: 700; line-height: 1.15; }
   .contato__local { flex-direction: column; }
   .sobre__texto, .sobre__fotos, .contato__dados, .contato__mapa { flex: none; }
   .contato__mapa { min-height: 240px; }
-  .grade-depoimentos { grid-template-columns: minmax(0, 1fr); }
+  .grade-avaliacoes { grid-template-columns: minmax(0, 1fr); }
 
   .barra-contato {
     position: fixed;
@@ -613,3 +622,9 @@ h3 { font-family: var(--fonte-titulo); font-weight: 700; line-height: 1.15; }
   *, *::before, *::after { transition: none !important; }
   .js .revelar { opacity: 1; transform: none; }
 }
+
+/* Botões da seção de avaliações */
+.avaliacoes__acoes { display: flex; flex-wrap: wrap; gap: 12px; }
+.botao--contorno { background: transparent; color: var(--branco); box-shadow: inset 0 0 0 2px var(--laranja); }
+.botao--contorno:hover { background: var(--laranja); color: var(--preto); }
+.botao--contorno:focus-visible { outline-color: var(--branco); }

@@ -6,3 +6,6 @@
 
 # Arquivos de trabalho do cliente (PDF do Canva)
 /*.pdf
+
+# Materiais impressos para o cliente (QR Code etc.)
+/materiais/
