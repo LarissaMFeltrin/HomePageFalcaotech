@@ -257,6 +257,7 @@ h3 { font-family: var(--fonte-titulo); font-weight: 700; line-height: 1.15; }
 .secao--prata { background: var(--prata); color: var(--preto); }
 .secao__cabecalho { display: flex; flex-direction: column; gap: 12px; max-width: 760px; }
 .secao__cabecalho p:not(.rotulo) { color: var(--cinza); }
+.secao__cabecalho p.secao__chamada { font-family: var(--fonte-titulo); font-weight: 700; font-size: 20px; color: var(--laranja-texto); }
 
 /* Sintomas */
 .sintomas { width: 100%; border-top: 1px solid var(--linha); }
@@ -356,22 +357,21 @@ h3 { font-family: var(--fonte-titulo); font-weight: 700; line-height: 1.15; }
   cursor: pointer;
 }
 
-/* Especialidades */
-.grade-especialidades {
+/* Reparos da Falcon Tech */
+.reparos {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-}
-.especialidade {
+  max-width: 960px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 28px 24px;
-  background: var(--cartao);
+  gap: 16px;
+  padding-top: 28px;
+  border-top: 1px solid var(--linha);
 }
-.especialidade h3 { font-size: 25px; }
-.especialidade p:last-child { font-size: 17px; color: var(--cinza); }
+.reparos h3 { font-size: 22px; }
+.reparos__lista { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 48px; }
+.reparos__lista li { position: relative; padding-left: 20px; font-size: 19px; color: var(--cinza); }
+.reparos__lista li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 8px; height: 8px; background: var(--laranja); }
+.reparos__lista strong { font-family: var(--fonte-titulo); font-weight: 700; color: var(--branco); }
 
 /* Peças */
 .pecas__cabecalho {
@@ -383,7 +383,8 @@ h3 { font-family: var(--fonte-titulo); font-weight: 700; line-height: 1.15; }
   gap: 20px 48px;
 }
 .pecas__cabecalho > div { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 12px; }
-.pecas__cabecalho > p { flex: 0 1 380px; min-width: 0; color: var(--texto-prata); }
+.pecas__cabecalho > .pecas__intro { flex: 0 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 10px; color: var(--texto-prata); }
+.pecas__destaque { font-family: var(--fonte-titulo); font-weight: 700; font-size: 20px; color: var(--preto); }
 .grade-pecas {
   width: 100%;
   display: grid;
@@ -523,7 +524,6 @@ h3 { font-family: var(--fonte-titulo); font-weight: 700; line-height: 1.15; }
 .js .revelar.visivel { opacity: 1; transform: none; }
 
 @media (max-width: 1100px) {
-  .grade-especialidades { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .topo__nav { gap: 20px; }
 }
 
@@ -598,7 +598,8 @@ h3 { font-family: var(--fonte-titulo); font-weight: 700; line-height: 1.15; }
   .porta__acao { display: none; }
   .sintoma { flex-direction: column; align-items: flex-start; padding-block: 16px; gap: 4px; }
   .sintoma__servico { flex: none; font-size: 14px; }
-  .grade-especialidades { grid-template-columns: minmax(0, 1fr); }
+  .reparos__lista { grid-template-columns: minmax(0, 1fr); }
+  .reparos__lista li { font-size: 17px; }
   .contato__unidades { grid-template-columns: minmax(0, 1fr); }
   .secao { gap: 24px; }
   .peca__texto { padding: 12px; }
