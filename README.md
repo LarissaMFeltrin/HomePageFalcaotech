@@ -13,16 +13,19 @@ Depois abra http://localhost:8090.
 
 ## Publicar
 
-Envie só o conteúdo de `public/` para o servidor. As imagens recebidas do cliente ficam só na máquina local e não são versionadas.
+Domínio: https://falcontechautomotivo.com.br
 
-Antes de publicar no domínio definitivo:
+O site fica no servidor aaPanel, clonado em `/www/wwwroot/falcontech`, com a raiz do site apontando para `/www/wwwroot/falcontech/public`. Assim só o conteúdo de `public/` fica acessível. As imagens recebidas do cliente ficam só na máquina local e não são versionadas.
 
-- [ ] Remover `<meta name="robots" content="noindex, nofollow">` de `public/index.html`
-- [ ] Trocar a imagem de `og:image` por uma URL completa com o domínio
-- [ ] Adicionar `<link rel="canonical">` e `og:url` com o domínio
-- [ ] Adicionar `url` e `image` aos dados da empresa (bloco `application/ld+json`)
-- [ ] Criar `public/sitemap.xml` e apontar para ele no `public/robots.txt`
-- [ ] Preencher todos os itens entre `[colchetes]` (`grep -n "\[" public/index.html`)
+Para atualizar depois de juntar algo na `main`:
+
+```bash
+cd /www/wwwroot/falcontech && git pull
+```
+
+Pendente:
+
+- [ ] Preencher a assinatura da história (`[assinatura da autora]`)
 
 Depois de publicar:
 
