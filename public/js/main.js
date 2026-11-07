@@ -78,7 +78,7 @@ document.querySelectorAll('.carrossel').forEach((carrossel) => {
 });
 
 // Animação de entrada das seções ao rolar a página
-const blocos = document.querySelectorAll('.secao__cabecalho, .sintomas, .especialidade, .peca, .sobre__texto, .sobre__fotos, .depoimento, .contato__dados');
+const blocos = document.querySelectorAll('.secao__cabecalho, .reparos, .sobre__texto, .sobre__fotos, .depoimento, .contato__dados');
 
 if ('IntersectionObserver' in window) {
   const observador = new IntersectionObserver((entradas) => {
