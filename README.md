@@ -25,7 +25,7 @@ cd /www/wwwroot/falcontech && git pull
 
 Pendente:
 
-- [ ] Preencher a assinatura da história (`[assinatura da autora]`)
+- Nenhum
 
 Depois de publicar:
 

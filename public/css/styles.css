@@ -147,7 +147,8 @@ h3 { font-family: var(--fonte-titulo); font-weight: 700; line-height: 1.15; }
   font-weight: 500;
   font-size: 16px;
 }
-.topo__nav a { padding-block: 10px; color: var(--branco); text-decoration: none; }
+.topo__nav a { padding-block: 10px; color: var(--branco); text-decoration: none; white-space: nowrap; }
+.topo__cta { white-space: nowrap; flex-shrink: 0; }
 .topo__nav a:hover { color: var(--laranja-texto); }
 .topo__menu {
   display: none;
@@ -258,6 +259,7 @@ h3 { font-family: var(--fonte-titulo); font-weight: 700; line-height: 1.15; }
 .secao__cabecalho { display: flex; flex-direction: column; gap: 12px; max-width: 760px; }
 .secao__cabecalho p:not(.rotulo) { color: var(--cinza); }
 .secao__cabecalho p.secao__chamada { font-family: var(--fonte-titulo); font-weight: 700; font-size: 20px; color: var(--laranja-texto); }
+.necessidades { width: 100%; max-width: 1100px; }
 
 /* Sintomas */
 .sintomas { width: 100%; border-top: 1px solid var(--linha); }
@@ -536,7 +538,8 @@ h3 { font-family: var(--fonte-titulo); font-weight: 700; line-height: 1.15; }
   .topo__nav { gap: 20px; }
 }
 
-@media (max-width: 900px) {
+/* Menu de três linhas a partir de telas médias, porque os nomes do menu são longos */
+@media (max-width: 1260px) {
   .topo__menu { display: flex; }
   .topo__cta { display: none; }
   .topo__nav {
@@ -555,7 +558,9 @@ h3 { font-family: var(--fonte-titulo); font-weight: 700; line-height: 1.15; }
   }
   .topo__nav.aberto { display: flex; }
   .topo__nav a { padding-block: 14px; font-size: 18px; }
+}
 
+@media (max-width: 900px) {
   .portas { grid-template-columns: minmax(0, 1fr); }
   .porta, .porta:first-child { min-height: 170px; padding-inline: var(--margem); }
   .porta--eletrica { --porta-imagem: url("../img/portas/eletrica-640.webp"); }
