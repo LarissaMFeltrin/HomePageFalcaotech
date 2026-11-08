@@ -426,24 +426,6 @@ h3 { font-family: var(--fonte-titulo); font-weight: 700; line-height: 1.15; }
   gap: 16px;
 }
 
-.historia { flex: 0 0 100%; min-width: 0; border-top: 1px solid var(--linha); }
-.historia summary {
-  display: flex;
-  align-items: center;
-  min-height: 56px;
-  font-family: var(--fonte-titulo);
-  font-weight: 700;
-  color: var(--laranja-texto);
-  cursor: pointer;
-}
-.historia summary::after { content: "+"; margin-left: 12px; font-size: 24px; line-height: 1; }
-.historia[open] summary::after { content: "–"; }
-.historia summary:focus-visible { outline: 3px solid var(--branco); outline-offset: 2px; }
-.historia__texto { display: flex; flex-direction: column; gap: 16px; max-width: 42em; padding-block: 8px 16px; color: var(--cinza); }
-.historia__texto h3 { font-size: 26px; color: var(--branco); text-wrap: balance; }
-.historia__frentes { display: flex; flex-direction: column; gap: 10px; }
-.historia__frentes strong { color: var(--branco); font-weight: 600; }
-
 /* Avaliações do Google */
 .grade-avaliacoes {
   width: 100%;
